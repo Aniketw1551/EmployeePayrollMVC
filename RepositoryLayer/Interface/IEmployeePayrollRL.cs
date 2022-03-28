@@ -11,6 +11,6 @@ namespace RepositoryLayer.Interface
         public void UpdateEmployee(EmployeeModel employeeModel);
         public EmployeeModel GetEmployeeDataById(int? id);
         public List<EmployeeModel> AllEmployeesList();
-        public void DeleteEmployee(EmployeeModel employeeModel);
+        public void DeleteEmployee(int? id);
     }
 }

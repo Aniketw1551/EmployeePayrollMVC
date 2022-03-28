@@ -52,7 +52,7 @@ namespace RepositoryLayer.Services
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@EmployeeId", employeeModel.EmployeeId);
                     cmd.Parameters.AddWithValue("@EmployeeName", employeeModel.EmployeeName);
-                    cmd.Parameters.AddWithValue("@ProfileImg", employeeModel.ProfileImage);
+                    cmd.Parameters.AddWithValue("@ProfileImage", employeeModel.ProfileImage);
                     cmd.Parameters.AddWithValue("@Gender", employeeModel.Gender);
                     cmd.Parameters.AddWithValue("@Department", employeeModel.Department);
                     cmd.Parameters.AddWithValue("@Salary", employeeModel.Salary);
@@ -84,7 +84,7 @@ namespace RepositoryLayer.Services
                     {
                         employeeModel.EmployeeId = Convert.ToInt32(dr["EmployeeId"]);
                         employeeModel.EmployeeName = dr["EmployeeName"].ToString();
-                        employeeModel.ProfileImage = dr["ProfileImg"].ToString();
+                        employeeModel.ProfileImage = dr["ProfileImage"].ToString();
                         employeeModel.Gender = dr["Gender"].ToString();
                         employeeModel.Department = dr["Department"].ToString();
                         employeeModel.Salary = Convert.ToInt32(dr["Salary"]);
@@ -137,7 +137,7 @@ namespace RepositoryLayer.Services
             }
         }
 
-        public void DeleteEmployee(EmployeeModel employeeModel)
+        public void DeleteEmployee(int? id)
         {
             try
             {
@@ -145,7 +145,7 @@ namespace RepositoryLayer.Services
                 {
                     SqlCommand cmd = new SqlCommand("spDeleteEmployee", con);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@EmployeeId", employeeModel.EmployeeId);
+                    cmd.Parameters.AddWithValue("@EmployeeId", id);
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();

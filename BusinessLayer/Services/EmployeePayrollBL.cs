@@ -9,7 +9,7 @@ namespace BusinessLayer.Services
 {
     public class EmployeePayrollBL : IEmployeePayrollBL
     {
-        private readonly IEmployeePayrollRL employeePayrollRL;
+        IEmployeePayrollRL employeePayrollRL;
 
         public EmployeePayrollBL(IEmployeePayrollRL employeePayrollRL)
         {
@@ -63,11 +63,11 @@ namespace BusinessLayer.Services
             }
         }
 
-        public void DeleteEmployee(EmployeeModel employeeModel)
+        public void DeleteEmployee(int? id)
         {
             try
             {
-                this.employeePayrollRL.DeleteEmployee(employeeModel);
+                this.employeePayrollRL.DeleteEmployee(id);
             }
             catch (Exception ex)
             {
