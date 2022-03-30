@@ -1,3 +1,46 @@
-﻿.row{
+﻿﻿.header-content {
+    display: flex;
+    justify-content: start;
+}
 
+.create {
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+}
+
+.text1 {
+    font: normal normal bold 22px/25px Montserrat;
+    text-transform: capitalize;
+    color: #82A70C;
+    text-align: left;
+    font-size: 18px;
+}
+
+.text2 {
+    font: normal normal bold 22px/25px Montserrat;
+    text-transform: capitalize;
+    color: #42515F;
+    text-align: left;
+    font-size: 18px;
+}
+
+.icon {
+    height: 45px;
+    width: 45px;
+    padding-top: 5px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.buttons {
+    text-align: center
 }
