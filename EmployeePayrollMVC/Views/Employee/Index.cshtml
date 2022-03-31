@@ -14,7 +14,7 @@
  </div>
 
     <p>
-        <a asp-action="Create">Create New Employee Data</a>
+        <a style="color: #82A70C" asp-action="Create">Create New Employee Data</a>
     </p>
     <table style="background-color:#F2F3F4" class="table">
         <thead>
@@ -75,9 +75,9 @@
                         @Html.DisplayFor(modelItem => item.Notes)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.EmployeeId }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.EmployeeId }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.EmployeeId })
+                        @Html.ActionLink("Edit", "Edit", new { id = item.EmployeeId }, new { @style="color: #82A70C;" })
+                        @*@Html.ActionLink("Details", "Details", new { id = item.EmployeeId }) |*@
+                        @Html.ActionLink("Delete", "Delete", new { id = item.EmployeeId }, new { @style = "color:#ff0000;" })
                     </td>
                 </tr>
             }
