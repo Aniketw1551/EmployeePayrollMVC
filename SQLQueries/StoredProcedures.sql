@@ -1,4 +1,4 @@
----------------------Stored Procedures------------------
+---------------------Stored Procedures-------------------
 
 -------Add Employee stored procedure--------
 alter procedure spAddEmployee

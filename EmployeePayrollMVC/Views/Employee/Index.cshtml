@@ -13,8 +13,9 @@
     <h3>Employee Details</h3>
  </div>
 
-    <p>
-        <a style="color: #82A70C" asp-action="Create">Create New Employee Data</a>
+    <p class="btc">
+        <input type="button" onclick="location.href='@Url.Action("Create", "Employee")'" value="Create New Employee Data" class="btn btn-primary"/>
+        @*<a style="color: #82A70C" asp-action="Create">Create New Employee Data</a>*@
     </p>
     <table style="background-color:#F2F3F4" class="table">
         <thead>
